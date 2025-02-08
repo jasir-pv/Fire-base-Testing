@@ -15,7 +15,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+       "googleServicesFile": "./google-services.json",
+       "package": "com.authtest.firebase"
     },
     "web": {
       "bundler": "metro",
@@ -32,7 +34,16 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      ["expo-build-properties", {
+        "ios": {
+          "useFrameworks": "static",
+          "googleServicesFile": "./google-services.json",
+          "bundleIdentifier": "com.authtest.firebase"
+        }
+      }],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
     ],
     "experiments": {
       "typedRoutes": true
